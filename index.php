@@ -1,7 +1,7 @@
 <?php
 include ("conexionBD.php");
 
-$conexion=abrir_conexion("localhost", "root", "root", "isaac");
+$conexion=abrir_conexion("localhost", "root", "", "isaac");
 ?>
 
 <!DOCTYPE html>

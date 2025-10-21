@@ -87,6 +87,29 @@ select:focus {
     box-shadow: 0 0 5px #ff0000aa;
 }
 
+input[type="submit"] {
+    margin-top: 1.5rem;
+    background-color: #5c0a0a;
+    color: #f0e6d2;
+    border: none;
+    padding: 0.6rem 1rem;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.7rem;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 0 5px #000;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #8b0000;
+    transform: scale(1.05);
+}
+
+input[type="submit"]:active {
+    transform: scale(0.95);
+}
+
 div {
     animation: flicker 1.5s infinite;
 }
