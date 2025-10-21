@@ -1,0 +1,97 @@
+/* estilos.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    background-color: #1c1c1c;
+    background-image: url('https://i.imgur.com/6YjZzZy.png'); /* textura tipo piedra oscura */
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #f0e6d2;
+    font-family: 'Press Start 2P', monospace;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #ffcc99;
+    text-shadow: 2px 2px #5c0a0a;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px dashed #8b0000;
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+
+form {
+    background-color: #2a2a2a;
+    border: 4px solid #5c0a0a;
+    box-shadow: 0 0 20px #000000aa;
+    padding: 2rem;
+    width: 320px;
+    border-radius: 8px;
+    position: relative;
+}
+
+form::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px dashed #8b0000;
+    pointer-events: none;
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+    color: #ffcc99;
+    font-size: 0.75rem;
+    text-shadow: 1px 1px #000;
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    background-color: #3a3a3a;
+    border: 2px solid #5c0a0a;
+    color: #f0e6d2;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.7rem;
+    border-radius: 4px;
+    box-shadow: inset 0 0 5px #000000aa;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+select {
+    cursor: pointer;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #ff0000;
+    box-shadow: 0 0 5px #ff0000aa;
+}
+
+div {
+    animation: flicker 1.5s infinite;
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.95; }
+}
