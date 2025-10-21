@@ -1,5 +1,8 @@
 <?php
-    require("conexionBD.php")
+    require("conexionBD.php");
+    $conexion=abrir_conexion("localhost", "root", "", "isaac");
+    $query="";
+    mysqli_query($conexion,$query);
 ?>
 <!DOCTYPE html>
 <html lang="es">
