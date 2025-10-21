@@ -18,6 +18,14 @@ if(!isset($_POST['tipo']) || empty($_POST['tipo'])){
     echo "no seleccionaste nada";
 
 }
+//valida el minimo de caracter en letras
+if (strlen($nombre) < 2 || strlen($nombre) > 100) {
+
+    echo "nombre valido";
+
+} else {
+    echo "nombre no valido";
+}
 // selecciona el tipo desde la base de datos
  $result = $conn->query("SELECT tipo from items");
  
