@@ -1,8 +1,8 @@
 <?php
     require("conexionBD.php");
     $conexion=abrir_conexion("localhost", "root", "", "isaac");
-    $query="";
-    mysqli_query($conexion,$query);
+    $consulta="SELECT * from items";
+    $query=mysqli_query($conexion,$consulta);
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -14,7 +14,11 @@
 <body>
     <h1>Lista de items</h1>
     <?php
-        
+        while($row=mysqli_fetch_assoc($query)){
+            echo "<div>
+                <h6>" . $row['nombre'] . "</h6>
+            </div>";
+        }
     ?>
 </body>
 </html>
